@@ -1,0 +1,380 @@
+.fargorow {
+  height: 800px;
+}
+
+.wacomrow {
+  padding-top: 150px;
+  height: 800px;
+}
+
+.javrow {
+  padding-top: 300px;
+  height: 800px;
+}
+
+.nitgenrow {
+  padding-top: 500px;
+  height: 800px;
+}
+
+.fargo {
+  border: 1px solid;
+  height: 500px;
+}
+
+.colright {
+  text-align: center;
+}
+
+.colright img {
+  height: 350px;
+  width: 500px;
+}
+.cardcon body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #131313;
+}
+
+.cardcon {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  height: 550px; /* Height of the container */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-left: 20px;
+}
+
+
+
+.ccontainer {
+  position: relative;
+}
+
+.ccontainer .card {
+  position: relative;
+  width: 280px;
+  height: 375px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ccontainer .card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.wacomc .card::before {
+  background: rgb(173, 9, 9);
+}
+
+.fargoc .card::before {
+  background: rgba(16, 159, 255, 0.973);
+}
+
+.javc .card::before {
+  background: rgb(255, 136, 0);
+}
+
+.nitgenc .card::before {
+  background: rgb(71, 60, 231);
+}
+
+.ccontainer .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.ccontainer .card:after {
+  position: absolute;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 25, 0.05)
+}
+
+.wacomc .card:after {
+  top: 60%;
+  left: 5%;
+  font-size: 5em;
+  content: 'WACOM';
+}
+
+.fargoc .card:after {
+  top: 60%;
+  left: 5%;
+  font-size: 5em;
+  content: 'FARGO';
+}
+
+.javc .card:after {
+  top: 60%;
+  left: 5%;
+  font-size: 60px;
+  content: 'JAVELIN';
+}
+
+.nitgenc .card:after {
+  top: 60%;
+  left: 5%;
+  font-size: 4em;
+  content: 'NITGEN';
+}
+
+
+.ccontainer .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.ccontainer .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(-15%);
+
+}
+
+.ccontainer .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 200px;
+}
+
+.ccontainer .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.ccontainer .card:hover .contentBx {
+  height: 210px;
+}
+
+.ccontainer .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+
+.ccontainer .card .contentBx .size,
+.container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ccontainer .card:hover .contentBx .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.ccontainer .card:hover .contentBx .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.ccontainer .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.ccontainer .card .contentBx .size span {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ccontainer .card .contentBx .size span:hover {
+  background: #c3bcff;
+}
+
+.ccontainer .card .contentBx .color span {
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.ccontainer .card .contentBx .color span:nth-child(2) {
+  background: #9bdc28;
+}
+
+.ccontainer .card .contentBx .color span:nth-child(3) {
+  background: #03a9f4;
+}
+
+.ccontainer .card .contentBx .color span:nth-child(4) {
+  background: #e91e63;
+}
+
+.ccontainer .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
+}
+
+.ccontainer .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+
+}
+.card{
+  box-shadow: 0px 16px 36px 12px rgba(0,0,0,0.44);
+-webkit-box-shadow: 0px 16px 36px 12px rgba(0,0,0,0.44);
+-moz-box-shadow: 0px 16px 36px 12px rgba(0,0,0,0.44);
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  background-color: var(--background-color);
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.wrapper>div {
+  grid-area: 1/1/-1/-1;
+}
+
+.top {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+
+.bottom {
+  clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+  background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+  background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translateX(-0.02em);
+}
+
+.fargowr .bottom {
+  color: rgba(16, 159, 255, 0.973);
+}
+
+.wacomwr .bottom {
+  color: rgb(173, 9, 9);
+}
+
+.javwr .bottom {
+  color: rgb(255, 136, 0);
+}
+
+.nitgenwr .bottom {
+  color: rgb(71, 60, 231);
+}
+
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
